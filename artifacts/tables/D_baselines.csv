@@ -1,0 +1,4 @@
+features,model,roc_auc,roc_auc_std,accuracy
+numeric only (39),gbm,0.8616,0.0505,0.7996
+text-length only (2),logreg,0.5771,0.0726,0.543
+numeric + length,gbm,0.8646,0.0502,0.8019

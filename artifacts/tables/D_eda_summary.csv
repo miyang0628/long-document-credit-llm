@@ -1,0 +1,3 @@
+split,n,bankrupt,bankruptcy_rate
+train,111,55,0.4955
+test,111,56,0.5045

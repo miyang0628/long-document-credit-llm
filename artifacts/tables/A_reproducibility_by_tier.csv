@@ -1,0 +1,4 @@
+tier,model,verdict_flip_rate,mean_minority_frac,mean_driver_jaccard
+mid,gpt-5.4-mini,0.067,0.013,0.719
+strong,gpt-5.4,0.0,0.0,0.755
+weak,gpt-4o-mini,0.0,0.0,0.58

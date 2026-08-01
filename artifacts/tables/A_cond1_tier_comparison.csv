@@ -1,0 +1,3 @@
+tier,model,trap_called_healthy,obvious_caught,healthy_correct,cost_usd
+weak,gpt-4o-mini,0.0,1.0,0.14,0.0595
+mid,gpt-5.4-mini,0.01,1.0,0.54,0.4556

@@ -1,0 +1,25 @@
+# Paper A (RGL) — ratio separation table
+# Data: Drotar et al. (2019), Data in Brief 25:104360; Mendeley V2 (CC BY 4.0)
+# Ratio identities: Zoricak et al. (2020), Economic Modelling 84:165-176, Table 2
+# Winsorized [1%,99%] (caps from non-bankrupt); year-3 = R-1.
+abbrev,ratio,category,level_SMD_R1,trend_SMD,level_med_NB,level_med_B,miss_max,max_abs_SMD,stronger_signal
+ROA,Return on Assets,Profitability,-1.2998,-0.5478,3.21,-19.16,0.0068,1.2998,level
+ROS,Return on Sales,Profitability,-1.1653,-0.583,2.01,-22.34,0.1055,1.1653,level
+ROI,Return on Investment,Profitability,-0.5341,-0.2828,21.1,-0.69,0.0068,0.5341,level
+LRR,Labor-to-Revenue Ratio,Profitability,0.4876,0.1006,9.36,18.455,0.0568,0.4876,level
+ROE,Return on Equity,Profitability,0.0741,0.1061,12.47,26.24,0.0076,0.1061,trend
+WAR,Wages to Added Value Ratio,Profitability,-0.0155,-0.0487,44.98,47.435,0.0272,0.0487,trend
+DIR,Debt to Income Ratio,Solvency,1.6615,0.6207,60.71,122.92,0.0077,1.6615,level
+DCR,Debt Service Coverage Ratio,Solvency,-0.7642,-0.2042,16.82,-9.51,0.038,0.7642,level
+BL,Bank Liabilities to Debt Ratio,Solvency,0.5946,0.0681,0.0,8.22,0.0101,0.5946,level
+ACR,Asset Coverage Ratio,Solvency,-0.4857,-0.2674,1.29,-0.14,0.2535,0.4857,level
+DA,Debt-to-Assets Ratio,Solvency,0.3032,0.2674,0.65,1.37,0.03,0.3032,level
+FL,Financial Leverage,Solvency,0.0361,-0.1553,2.16,-0.24,0.0076,0.1553,trend
+DE,Debt-to-Equity Ratio,Solvency,0.0093,-0.02,1.4,-1.285,0.0308,0.02,trend
+DTR,Days Total Receivables Outstanding,Activity,0.7378,0.3982,81.955,331.355,0.0665,0.7378,level
+ATD,Asset Turnover Days,Activity,0.4417,0.1393,52.9,96.17,0.1116,0.4417,level
+TAT,Total Asset Turnover,Activity,0.3377,0.1226,246.15,364.13,0.0579,0.3377,level
+ITD,Inventory Turnover Days,Activity,0.1862,0.0627,32.785,39.505,0.2589,0.1862,level
+L3,Current Ratio,Liquidity,-0.5626,0.0229,1.44,0.535,0.0429,0.5626,level
+L2,Quick Ratio,Liquidity,-0.5269,0.0315,1.08,0.31,0.042,0.5269,level
+L1,Cash Ratio,Liquidity,-0.5127,0.0989,0.33,0.01,0.0437,0.5127,level

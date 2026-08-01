@@ -1,0 +1,10 @@
+strategy,model,n,ROC_AUC,ci_low,ci_high,accuracy,cost_usd
+truncation,gpt-4o-mini,222,0.8249,0.7707,0.8735,0.5991,0.2475
+truncation,gpt-5.4-mini,222,0.8937,0.8512,0.9319,0.7072,1.2606
+truncation,gpt-5.4,222,0.9103,0.87,0.9439,0.8333,4.2254
+extraction,gpt-4o-mini,222,0.8247,0.7728,0.8735,0.5225,0.1142
+extraction,gpt-5.4-mini,222,0.873,0.8261,0.9158,0.6081,0.5933
+extraction,gpt-5.4,222,0.8929,0.8453,0.9323,0.7162,2.0117
+chunking,gpt-4o-mini,222,0.8557,0.8018,0.903,0.509,1.0451
+chunking,gpt-5.4-mini,222,0.8746,0.8243,0.919,0.6351,5.2707
+chunking,gpt-5.4,222,0.898,0.8517,0.9377,0.7387,16.9622

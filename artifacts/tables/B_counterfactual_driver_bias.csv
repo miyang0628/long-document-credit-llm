@@ -1,0 +1,7 @@
+tier,framing,driver_jaccard_across_industry,top1_stable_across_industry
+gpt-4o-mini,explicit,0.8847,0.84
+gpt-4o-mini,implicit,0.8477,0.84
+gpt-5.4-mini,explicit,0.643,0.44
+gpt-5.4-mini,implicit,0.744,0.66
+gpt-5.4,explicit,0.7837,0.68
+gpt-5.4,implicit,0.8657,0.76

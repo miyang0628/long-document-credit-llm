@@ -1,0 +1,157 @@
+# Paper A (RGL) — rule thresholds (3 grades: normal/watch/alert)
+# Thresholds in DATASET units (several ratios on x100 / days scale).
+# Textbook cutoffs w/ empirical support: Li (2024), Accounting & Finance
+#   (current 1.0, liabilities/assets 0.6, ROA 0.0). Norms: CFI/BDC/Farseer.
+# Data: Drotar et al. (2019), DiB 25:104360; Mendeley V2 (CC BY 4.0).
+# Category weights: Zoricak et al. (2020), Econ. Modelling 84:165-176.
+# direction: low_bad | high_bad | negative_bad (<=0 = capital erosion).
+# signal_tier: 3 strong (lift>=10), 2 medium (2<=lift<10), 1 weak (lift<2).
+# composite_weight = category_weights[category] * signal_tier.
+
+category_weights:
+  Profitability: 1.0
+  Solvency: 1.0
+  Activity: 0.5
+  Liquidity: 0.5
+
+thresholds:
+  ROA:
+    category: Profitability
+    direction: low_bad
+    watch: 0.0
+    alert: -5.0
+    signal_tier: 3
+    basis: "textbook ROA=0 (Li 2024); validated lift 22x"
+  ROS:
+    category: Profitability
+    direction: low_bad
+    watch: 0.0
+    alert: -5.0
+    signal_tier: 3
+    basis: "margin<=0 distress; validated lift 24x"
+  ROI:
+    category: Profitability
+    direction: low_bad
+    watch: 2.0
+    alert: 0.0
+    signal_tier: 3
+    basis: "return<cost-of-capital; validated lift 12x"
+  ROE:
+    category: Profitability
+    direction: low_bad
+    watch: 0.0
+    alert: -10.0
+    signal_tier: 1
+    basis: "weak separator (SMD 0.11); kept low-weight"
+  LRR:
+    category: Profitability
+    direction: high_bad
+    watch: 15.0
+    alert: 25.0
+    signal_tier: 2
+    basis: "labor cost share; validated lift 3x"
+  WAR:
+    category: Profitability
+    direction: high_bad
+    watch: 60.0
+    alert: 80.0
+    signal_tier: 1
+    basis: "weak separator; kept for Paper B coverage"
+  L1:
+    category: Liquidity
+    direction: low_bad
+    watch: 0.5
+    alert: 0.2
+    signal_tier: 3
+    basis: "cash ratio ~0.2-0.5 (CFI); validated lift 47x"
+  L2:
+    category: Liquidity
+    direction: low_bad
+    watch: 1.0
+    alert: 0.5
+    signal_tier: 3
+    basis: "quick ratio 1.0 (BDC); validated lift 14x"
+  L3:
+    category: Liquidity
+    direction: low_bad
+    watch: 1.0
+    alert: 0.8
+    signal_tier: 3
+    basis: "current ratio 1.0 (Li 2024); validated lift 14x"
+  TAT:
+    category: Activity
+    direction: high_bad
+    watch: 300.0
+    alert: 500.0
+    signal_tier: 2
+    basis: "asset turnover days; validated lift 2x"
+  ATD:
+    category: Activity
+    direction: high_bad
+    watch: 90.0
+    alert: 180.0
+    signal_tier: 2
+    basis: "turnover days; validated lift 4x"
+  DTR:
+    category: Activity
+    direction: high_bad
+    watch: 120.0
+    alert: 250.0
+    signal_tier: 3
+    basis: "receivables days; validated lift 20x"
+  ITD:
+    category: Activity
+    direction: high_bad
+    watch: 60.0
+    alert: 120.0
+    signal_tier: 1
+    basis: "weak (industry-sensitive); kept low-weight"
+  DA:
+    category: Solvency
+    direction: high_bad
+    watch: 0.6
+    alert: 0.8
+    signal_tier: 3
+    basis: "liabilities/assets 0.6 (Li 2024); validated lift 20x"
+  DE:
+    category: Solvency
+    direction: negative_bad
+    watch: null
+    alert: 0.0
+    signal_tier: 3
+    basis: "negative equity=capital erosion; validated lift 16x"
+  FL:
+    category: Solvency
+    direction: negative_bad
+    watch: null
+    alert: 0.0
+    signal_tier: 3
+    basis: "negative leverage=capital erosion; validated lift 22x"
+  DIR:
+    category: Solvency
+    direction: high_bad
+    watch: 80.0
+    alert: 100.0
+    signal_tier: 3
+    basis: "debt/income; validated lift 35x"
+  DCR:
+    category: Solvency
+    direction: low_bad
+    watch: 5.0
+    alert: 1.0
+    signal_tier: 3
+    basis: "coverage<1 cannot service debt; validated lift 27x"
+  ACR:
+    category: Solvency
+    direction: low_bad
+    watch: 1.0
+    alert: 0.5
+    signal_tier: 3
+    basis: "asset coverage<1 risk; validated lift 15x"
+  BL:
+    category: Solvency
+    direction: high_bad
+    watch: 5.0
+    alert: 20.0
+    signal_tier: 2
+    basis: "bank-liab share; validated lift 4x"

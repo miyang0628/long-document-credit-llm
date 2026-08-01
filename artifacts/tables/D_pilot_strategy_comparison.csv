@@ -1,0 +1,13 @@
+strategy,tier,n,avg_segments,in_tok,out_tok,cost_usd,ROC_AUC,accuracy
+truncation,gpt-4o-mini,50,1.0,362894,2674,0.056,0.7896,0.56
+truncation,gpt-5.4-mini,50,1.0,362844,3107,0.2861,0.8576,0.72
+truncation,gpt-5.4,50,1.0,362844,3500,0.9596,0.8664,0.8
+extraction,gpt-4o-mini,50,1.0,160099,2645,0.0256,0.7392,0.52
+extraction,gpt-5.4-mini,50,1.0,160049,2987,0.1335,0.796,0.58
+extraction,gpt-5.4,50,1.0,160049,3555,0.4534,0.8296,0.68
+chunking,gpt-4o-mini,50,4.7,1560471,12629,0.2313,0.7912,0.5
+chunking,gpt-5.4-mini,50,4.7,1560236,14672,1.1498,0.8256,0.64
+chunking,gpt-5.4,50,4.7,1560236,16282,3.4277,0.8496,0.68
+summarization,gpt-4o-mini,50,1.0,1597033,41364,0.2644,0.7784,0.5
+summarization,gpt-5.4-mini,50,1.0,1602067,47814,1.4167,0.8536,0.62
+summarization,gpt-5.4,50,1.0,1605094,51316,4.7825,0.8656,0.72

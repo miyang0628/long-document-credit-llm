@@ -1,0 +1,4 @@
+Strategy,ROC-AUC,PR-AUC,Bias (FA spread),Bias (chi2)
+M0 global (baseline),0.921,0.099,0.163,748.0
+M1 within-industry quantile,0.92,0.101,0.009,4.0
+M2 global + offset,0.921,0.101,0.119,400.0

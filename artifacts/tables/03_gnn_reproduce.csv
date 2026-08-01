@@ -1,0 +1,5 @@
+mask,model,split,AUC,F1,KS
+A,HeteroGNN,val,0.8481,0.7386,0.5682
+A,HeteroGNN,test,0.7746,0.6473,0.4678
+B,HeteroGNN,val,0.8596,0.7523,0.583
+B,HeteroGNN,test,0.7655,0.6939,0.4484

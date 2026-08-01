@@ -1,0 +1,4 @@
+strategy,ROC_AUC,PR_AUC,falsealert_spread,falsealert_chi2,falsealert_p,fa_agriculture,fa_construction,fa_manufacture,fa_retail
+M0 global (baseline),0.92089,0.09884,0.16325,748.45461,0.0,0.93186,0.80247,0.79047,0.76861
+M1 within-industry quantile,0.91967,0.10133,0.00896,3.93711,0.26834,0.80348,0.79468,0.80084,0.79452
+M2 global + offset,0.92051,0.10114,0.11913,400.40076,0.0,0.8869,0.80354,0.76777,0.77947

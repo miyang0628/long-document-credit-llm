@@ -1,0 +1,7 @@
+tier,framing,verdict_swing_rate,atrisk_spread,atrisk_agriculture,atrisk_construction,atrisk_manufacture,atrisk_retail
+gpt-4o-mini,explicit,0.02,0.02,0.74,0.76,0.76,0.76
+gpt-4o-mini,implicit,0.04,0.04,0.78,0.8,0.82,0.8
+gpt-5.4-mini,explicit,0.06,0.04,0.74,0.74,0.78,0.76
+gpt-5.4-mini,implicit,0.06,0.04,0.76,0.78,0.78,0.74
+gpt-5.4,explicit,0.04,0.04,0.6,0.64,0.64,0.62
+gpt-5.4,implicit,0.02,0.02,0.64,0.62,0.64,0.64

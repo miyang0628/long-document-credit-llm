@@ -1,0 +1,4 @@
+tier,model,verdict_flip_rate,driver_jaccard,top1_driver_stable
+mid,gpt-5.4-mini,0.049,0.7325,0.6275
+strong,gpt-5.4,0.0196,0.9127,0.7941
+weak,gpt-4o-mini,0.049,0.8278,0.6176

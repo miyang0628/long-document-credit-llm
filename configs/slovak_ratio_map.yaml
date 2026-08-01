@@ -1,0 +1,105 @@
+# Slovak SME dataset — VERIFIED ratio mapping (source of truth)
+# Columns V1..V63 = 21 ratios x 3 years, block-wise:
+#   V1..V21 = year_1 (R-3), V22..V42 = year_2 (R-2), V43..V63 = year_3 (R-1).
+# In processed parquet these are ratioNN_yK (NN=1..21, K=1..3).
+#
+# Data:   Drotar et al. (2019), Data in Brief 25:104360;
+#         Mendeley Data V2, DOI 10.17632/j89csb932y.2 (CC BY 4.0).
+# Ratio identities/categories: Zoricak et al. (2020),
+#         Economic Modelling 84:165-176, Table 2.
+# Verification: per-industry medians (construction & manufacturing)
+#         matched to Table 2 for all 20 ratios; ratio18 = Labor
+#         Productivity fixed as the most-missing column.
+# Categories: Activity, Liquidity, Profitability, Solvency.
+
+ratios:
+  ratio01:
+    abbrev: ROA
+    name: "Return on Assets"
+    category: Profitability
+  ratio02:
+    abbrev: ROE
+    name: "Return on Equity"
+    category: Profitability
+  ratio03:
+    abbrev: ROS
+    name: "Return on Sales"
+    category: Profitability
+  ratio04:
+    abbrev: L1
+    name: "Cash Ratio"
+    category: Liquidity
+  ratio05:
+    abbrev: L2
+    name: "Quick Ratio"
+    category: Liquidity
+  ratio06:
+    abbrev: L3
+    name: "Current Ratio"
+    category: Liquidity
+  ratio07:
+    abbrev: TAT
+    name: "Total Asset Turnover"
+    category: Activity
+  ratio08:
+    abbrev: ATD
+    name: "Asset Turnover Days"
+    category: Activity
+  ratio09:
+    abbrev: DTR
+    name: "Days Total Receivables Outstanding"
+    category: Activity
+  ratio10:
+    abbrev: ITD
+    name: "Inventory Turnover Days"
+    category: Activity
+  ratio11:
+    abbrev: DA
+    name: "Debt-to-Assets Ratio"
+    category: Solvency
+  ratio12:
+    abbrev: DE
+    name: "Debt-to-Equity Ratio"
+    category: Solvency
+  ratio13:
+    abbrev: FL
+    name: "Financial Leverage"
+    category: Solvency
+  ratio14:
+    abbrev: ROI
+    name: "Return on Investment"
+    category: Profitability
+  ratio15:
+    abbrev: DIR
+    name: "Debt to Income Ratio"
+    category: Solvency
+  ratio16:
+    abbrev: DCR
+    name: "Debt Service Coverage Ratio"
+    category: Solvency
+  ratio17:
+    abbrev: ACR
+    name: "Asset Coverage Ratio"
+    category: Solvency
+  ratio18:
+    abbrev: LP
+    name: "Labor Productivity"
+    category: Profitability
+  ratio19:
+    abbrev: BL
+    name: "Bank Liabilities to Debt Ratio"
+    category: Solvency
+  ratio20:
+    abbrev: LRR
+    name: "Labor-to-Revenue Ratio"
+    category: Profitability
+  ratio21:
+    abbrev: WAR
+    name: "Wages to Added Value Ratio"
+    category: Profitability
+
+by_category:
+  Activity: [ratio07, ratio08, ratio09, ratio10]
+  Liquidity: [ratio04, ratio05, ratio06]
+  Profitability: [ratio01, ratio02, ratio03, ratio14, ratio18, ratio20, ratio21]
+  Solvency: [ratio11, ratio12, ratio13, ratio15, ratio16, ratio17, ratio19]

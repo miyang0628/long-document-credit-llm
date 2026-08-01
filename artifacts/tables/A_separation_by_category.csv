@@ -1,0 +1,5 @@
+category,n_ratios,mean_abs_level_SMD,mean_abs_trend_SMD,max_abs_SMD
+Profitability,6,0.5961,0.2782,1.2998
+Solvency,7,0.5507,0.229,1.6615
+Activity,4,0.4259,0.1807,0.7378
+Liquidity,3,0.534,0.0511,0.5626
